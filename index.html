@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание заявки</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h2>Создание заявки</h2>
+    <form id="requestForm" enctype="multipart/form-data">
+        <label>Номер аудитории:</label><br>
+        <input type="number" name="AuditoriumNumber" required><br><br>
+
+        <label>Тип заявки:</label><br>
+        <select name="RequestTypeId" required>
+            <option value="1">Мусор</option>
+            <option value="2">Техническая неполадка</option>
+            <option value="3">Нетехническая неполадка</option>
+        </select><br><br>
+
+        <label>Комментарий:</label><br>
+        <textarea name="Comment" rows="3" cols="30"></textarea><br><br>
+
+        <label>Фото (изображение):</label><br>
+        <input type="file" name="file" accept="image/*"><br><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <div id="response" style="margin-top: 20px; color: green;"></div>
+</body>
+</html>
